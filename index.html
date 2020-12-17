@@ -11,12 +11,29 @@
 
   <style>
     .meme {
-      width: auto;
+      width: 800px;
       height: auto;
       margin: 32px auto;
     }
 
-    .memeText {}
+    .memeImage {
+      width: 800px;
+    }
+
+    .memeText {
+      position: absolute;
+      width: 800px;
+      text-align: center;
+      color: white;
+      font-size: 48px;
+      overflow-wrap: break-word;
+      text-shadow: 0px 2px 0px rgba(0, 0, 0, 1);
+      font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    }
+
+    .outputMeme {
+      margin-bottom: 4000px;
+    }
   </style>
 
   <script type="text/javascript" src="html2canvas.min.js"></script>
@@ -59,7 +76,8 @@
   <p>@Dea now you don't need to do this manually</p>
 
   <p>Enter Text:</p>
-  <textarea id="inputText" rows="4" cols="64" placeholder="Place your text here..." oninput="processText()"></textarea>
+  <textarea id="inputText" rows="4" cols="64" placeholder="Place your text here..."
+    oninput="processText()">TEXT</textarea>
 
   <hr />
 
@@ -67,13 +85,16 @@
   <p id="outputText"></p>
 
   <hr />
+
+  <image class="outputMeme" id="outputMeme"></image>
+
+  <hr />
+
   <p>Output Meme:</p>
   <div class="meme" id="meme">
     <p id="memeText" class="memeText"></p>
-    <img src="spongebob.png">
+    <img class="memeImage" src="spongebob.png">
   </div>
-
-  <image id="outputMeme"></image>
 
   <script>
     processText();
