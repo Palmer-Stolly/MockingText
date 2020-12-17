@@ -41,63 +41,7 @@
 </head>
 
 <body>
-  <script>
-    function processText() {
-      // Get the input text
-      let inputText = document.getElementById("inputText").value;
-
-      // Convert to mocking
-      let outputText = "";
-      inputText = inputText.toLowerCase();
-      let makeUpper = true;
-      for (let i = 0; i < inputText.length; i++) {
-        let theChar = inputText.charAt(i);
-        if (makeUpper) outputText += theChar.toUpperCase();
-        else outputText += theChar;
-        makeUpper = !makeUpper;
-      }
-
-      // Set the output text
-      document.getElementById("outputText").innerText = outputText;
-
-      // Set image text
-      document.getElementById("memeText").innerText = outputText;
-
-      // TODO process image
-      html2canvas(document.getElementById("meme"), {
-        allowTaint: false,
-        logging: true
-      }).then(canvas => {
-        document.getElementById("outputMeme").src = canvas.toDataURL("image/png");
-      });
-    }
-  </script>
-
-  <p>@Dea now you don't need to do this manually</p>
-
-  <p>Enter Text:</p>
-  <textarea id="inputText" rows="4" cols="64" placeholder="Place your text here..." oninput="processText()"></textarea>
-
-  <hr />
-
-  <p>Output Text:</p>
-  <p id="outputText"></p>
-
-  <hr />
-
-  <image class="outputMeme" id="outputMeme"></image>
-
-  <hr />
-
-  <p>Output Meme:</p>
-  <div class="meme" id="meme">
-    <p id="memeText" class="memeText"></p>
-    <img class="memeImage" src="spongebob.png">
-  </div>
-
-  <script>
-    processText();
-  </script>
+  Get punked
 </body>
 
 </html>
