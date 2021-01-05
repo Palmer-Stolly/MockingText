@@ -54,7 +54,7 @@
         let theChar = inputText.charAt(i);
         if (makeUpper) outputText += theChar.toUpperCase();
         else outputText += theChar;
-        makeUpper = !makeUpper;
+        if (Math.random() > 0.2) {makeUpper = !makeUpper;}
       }
 
       // Set the output text
